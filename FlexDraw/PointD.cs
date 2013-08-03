@@ -20,7 +20,14 @@ namespace FlexDraw
             return new PointD(X + pt.X, Y + pt.Y);
         }
 
+        public void Subtract(PointD pt, out double dx, out double dy)
+        {
+            dx = X - pt.X;
+            dy = Y - pt.Y;
+        }
+
         public double X;
         public double Y;
     }
+
 }

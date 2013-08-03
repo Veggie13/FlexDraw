@@ -119,6 +119,18 @@ namespace FlexDraw
             Pen p = new Pen(c);
             _gc.DrawLine(p, Transform(pt1.Offset(CurrentOrigin)), Transform(pt2.Offset(CurrentOrigin)));
         }
+
+        public void Fill(PointD pt, Color c)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FillPolygon(IEnumerable<PointD> pts, Color c)
+        {
+            SolidBrush b = new SolidBrush(c);
+            Point[] points = pts.Select((pd) => (Transform(pd))).ToArray();
+            _gc.FillPolygon(b, points);
+        }
         #endregion
         #endregion
 

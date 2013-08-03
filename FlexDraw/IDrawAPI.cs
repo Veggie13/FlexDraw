@@ -12,5 +12,7 @@ namespace FlexDraw
         void FillRectangle(RectangleD rect, Color c);
         void FillEllipse(RectangleD rect, Color c);
         void DrawLine(PointD pt1, PointD pt2, Color c);
+        void Fill(PointD pt, Color c);
+        void FillPolygon(IEnumerable<PointD> pts, Color c);
     }
 }
